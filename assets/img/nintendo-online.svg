@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="447.29401"
+   height="81.664001"
+   viewBox="0 0 447.294 81.664003"
+   version="1.1"
+   id="svg12"
+   sodipodi:docname="Nintendo_Switch_Online_logo.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2244"
+     inkscape:window-height="1283"
+     id="namedview14"
+     showgrid="false"
+     inkscape:zoom="2.0010686"
+     inkscape:cx="212.55119"
+     inkscape:cy="49.05129"
+     inkscape:window-x="0"
+     inkscape:window-y="26"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg12" />
+  <defs
+     id="defs5">
+    <path
+       id="a"
+       d="M -171.883,-239.093 H 687.015 V 373.195 H -171.883 Z"
+       inkscape:connector-curvature="0" />
+  </defs>
+  <clipPath
+     id="b">
+    <use
+       xlink:href="#a"
+       overflow="visible"
+       id="use7"
+       style="overflow:visible"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </clipPath>
+  <path
+     clip-path="url(#b)"
+     d="m 38.933,50.719 a 7.677,7.677 0 0 0 7.678,7.677 7.677,7.677 0 0 0 7.677,-7.677 7.6775,7.6775 0 1 0 -15.355,0 M 86.943,26.22 H 74.309 a 0.531,0.531 0 0 0 -0.532,0.532 v 80.532 c 0,0.33 0.267,0.6 0.598,0.6 h 12.568 c 11.564,0 20.939,-9.375 20.939,-20.94 V 47.159 c 0,-11.564 -9.375,-20.939 -20.939,-20.939 m 2.99,53.172 a 8.256,8.256 0 0 1 -8.256,-8.257 8.257,8.257 0 0 1 16.513,0 8.257,8.257 0 0 1 -8.257,8.257 M 65.007,26.22 H 47.158 c -11.564,0 -20.939,9.375 -20.939,20.939 v 39.784 c 0,11.565 9.375,20.94 20.939,20.94 h 17.849 a 0.6,0.6 0 0 0 0.6,-0.6 V 26.818 a 0.598,0.598 0 0 0 -0.6,-0.598 m -5.984,75.081 H 47.158 c -3.835,0 -7.44,-1.493 -10.151,-4.204 A 14.258,14.258 0 0 1 32.803,86.944 V 47.159 c 0,-3.836 1.492,-7.441 4.203,-10.15 a 14.26,14.26 0 0 1 10.152,-4.205 h 11.865 z m 98.593,-62.315 c -17.164,0 -31.079,13.713 -31.079,30.628 0,16.915 13.915,30.629 31.079,30.629 17.165,0 31.079,-13.714 31.079,-30.629 0,-16.915 -13.914,-30.628 -31.079,-30.628 m 0,49.55 c -10.097,0 -18.284,-8.472 -18.284,-18.922 0,-10.45 8.187,-18.921 18.284,-18.921 10.098,0 18.283,8.471 18.283,18.921 0,10.45 -8.185,18.922 -18.283,18.922 m 170.077,9.84 h 12.354 V 40.853 H 327.693 Z M 473.513,52.07 V 40.853 h -47.498 v 57.523 h 47.498 V 87.158 H 438.37 V 74.163 h 33.438 V 63.513 H 438.37 V 52.07 Z M 396.999,77.955 368.363,40.852 h -11.589 v 57.523 h 11.632 V 60.02 l 30.617,38.356 h 10.188 V 40.853 h -12.213 v 37.102 z m -154.112,0 -28.636,-37.103 h -11.589 v 57.523 h 11.632 V 60.02 l 30.617,38.356 h 10.188 V 40.853 h -12.212 z m 41.294,-37.102 h -12.354 v 57.523 h 43.878 V 87.158 H 284.182 V 40.853 Z"
+     id="path10"
+     style="fill:#e60012;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     transform="translate(-26.219,-26.219997)" />
+</svg>

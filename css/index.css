@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* INICIO RESET GLOBAL */
+
+/* Paleta de colores */
+:root {
+  --Transparent: #ffffff00;
+  --Black: #000000;
+  --Black2: #333333;
+  --Black3: #666666;
+  --Black4: #adadad;
+  --Black5: #e0e0e0;
+  --White: #ffffff;
+  --White2: #d3d3d3;
+  --White3: #dedede;
+  --White4: #e9e9e9;
+  --White5: #f7f7f7;
+  --Orange: #f36e26;
+  --Orange2: #f58b51;
+  --Orange3: #f8a87d;
+  --Orange4: #fac5a8;
+  --Orange5: #fde2d4;
+  --Green: #32e875;
+  --Green2: #5bed91;
+  --Green3: #84f1ac;
+  --Green4: #adf6c8;
+  --Green5: #d6fae3;
+  --Blue: #2374ab;
+  --Blue2: #3595d6;
+  --Blue3: #68afe0;
+  --Blue4: #9acaea;
+  --Blue5: #cde4f5;
+  --Metallic: #2d3142;
+  --Metallic2: #4d5471;
+  --Metallic3: #71799e;
+  --Metallic4: #a0a6be;
+  --Metallic5: #d0d2df;
+  --Button-orange: linear-gradient(90deg, var(--Orange) 0%, var(--Orange3) 100%);
+  --Button-orange-MO: linear-gradient(90deg, var(--Orange) 0%, var(--Orange5) 100%);
+  --Button-green: linear-gradient(90deg, var(--Green) 0%, var(--Green3) 100%);
+  --Button-green-MO: linear-gradient(90deg, var(--Green) 0%, var(--Green5) 100%);
+  --Button-blue: linear-gradient(90deg, var(--Blue) 0%, var(--Blue3) 100%);
+  --Button-blue-MO: linear-gradient(90deg, var(--Blue) 0%, var(--Blue5) 100%);
+}
+/* Fin de Paleta de colores*/
+
+/* Barra de scroll personalizada */
+::-webkit-scrollbar {
+  width: 0.5625rem;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, var(--Black5) 0%, var(--Black4) 50%, var(--Black5) 100%);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--Orange) 0%, var(--Orange3) 50%, var(--Orange) 100%);
+  border-radius: 1rem;
+}
+/* Fin de Barra de scroll personalizada*/
+
+/* Selector universal */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+/* Fin */
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+/* Fin */
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+/* Fin */
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+/* Fin */
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+/* Fin */
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+/* Fin */
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Fin */
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+/* Fin */
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+::selection {
+  background-color: var(--Orange);
+  color: var(--White);
+}
+/* Fin */
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/* Fin */
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Fin */
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: var(--Texts);
+}
+/* Fin */
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  background-color: var(--White5);
+  color: var(--Black2);
+}
+/* Fin */
+
+/* FIN RESET GLOBAL */
+
