@@ -204,3 +204,77 @@ body {
 
 /* FIN RESET GLOBAL */
 
+.header {
+}
+.header__div {
+}
+.header__h1 {
+}
+.header__img {
+}
+.header__wrapper--normal {
+}
+.header__wrapper--wider {
+}
+.menu {
+}
+.menu__li {
+}
+.menu__login {
+}
+.menu__nav {
+}
+.menu__svg--cart {
+  width: 2rem;
+  height: 2rem;
+  fill: black;
+}
+.menu__svg--user {
+  width: 2rem;
+  height: 2rem;
+  fill: black;
+}
+.menu__ul {
+}
+.navmenu {
+}
+.navmenu__a {
+}
+.navmenu__li {
+}
+.navmenu__search {
+}
+.navmenu__span {
+}
+.navmenu__svg--arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__svg--magnify {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__svg--nintendo {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__svg--pc {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__svg--ps {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__svg--xbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: black;
+}
+.navmenu__ul {
+}
