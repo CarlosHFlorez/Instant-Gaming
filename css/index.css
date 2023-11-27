@@ -179,7 +179,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
 
   z-index: 1;
 }
@@ -270,7 +269,7 @@ body {
 .navmenu__li {
 }
 .navmenu__search {
-  background-color: #ff6e09;
+  background: linear-gradient(10deg, #ff8000, transparent) #ff4020;
   width: fit-content;
   padding: 1.5rem;
   border-radius: 50%;
@@ -282,6 +281,15 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+.navmenu__search:active {
+  width: 100%;
+  background: linear-gradient(10deg, #ff8000, transparent) #ff4020;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
 }
 .navmenu__span {
   color: white;
