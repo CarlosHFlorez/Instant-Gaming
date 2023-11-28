@@ -359,8 +359,8 @@ body {
   -o-transition: all 0.3s ease;
 }
 .navmenu__svg--close {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 2rem;
+  height: 2rem;
   fill: white;
   pointer-events: none;
 
@@ -376,7 +376,7 @@ body {
 .navmenu__close.is--active {
   display: block;
   position: absolute;
-  top: calc(50% - (36px / 2));
+  top: calc(50% - (48px / 2));
   right: -7%;
 
   cursor: pointer;
