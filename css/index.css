@@ -272,27 +272,30 @@ body {
 }
 .navmenu__search {
   background: linear-gradient(10deg, #ff8000, transparent) #ff4020;
-  width: 11.5%;
-  padding: 1.625rem;
+  width: 4.25rem;
+  height: 4.25rem;
+
+  padding: 1.5rem;
+
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
   -ms-border-radius: 3rem;
   -o-border-radius: 3rem;
+
   transition: width 0.3s ease;
   -webkit-transition: width 0.3s ease;
   -moz-transition: width 0.3s ease;
   -ms-transition: width 0.3s ease;
   -o-transition: width 0.3s ease;
+
   position: absolute;
   top: 0;
   right: 0;
+
   cursor: pointer;
+
   z-index: 1;
-  -webkit-border-radius: 50;
-  -moz-border-radius: 50;
-  -ms-border-radius: 50;
-  -o-border-radius: 50;
 }
 .navmenu__search:hover {
   .navmenu__svg--magnify {
@@ -319,6 +322,7 @@ body {
 .navmenu__input,
 .navmenu__advanced {
   display: none;
+  white-space: nowrap;
 }
 .navmenu__input.is--active {
   display: block;
@@ -345,6 +349,8 @@ body {
   width: 1rem;
   height: 1rem;
   fill: white;
+
+  margin: auto;
 
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
