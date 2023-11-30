@@ -211,6 +211,9 @@ body {
 .menu__li {
   color: #ffffffcc;
 }
+.menu__li:hover {
+  color: #ffffff;
+}
 .menu__a {
 }
 .menu__login {
@@ -228,12 +231,27 @@ body {
 .login__svg--cart {
   width: 1.75rem;
   height: 1.75rem;
-  fill: white;
+  fill: #ffffff;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 .login__svg--user {
   width: 1.75rem;
   height: 1.75rem;
-  fill: white;
+  fill: #ffffff;
+}
+.login__svg--cart:hover {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: #ff4020;
+}
+.login__svg--user:hover {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: #ff4020;
 }
 .login__a {
   padding: 0.5rem;
@@ -267,6 +285,11 @@ body {
   gap: 8px;
 
   padding: 1rem;
+}
+.navmenu__a:hover {
+  .navmenu__svg--arrow {
+    fill: #ffffff;
+  }
 }
 .navmenu__li {
 }
