@@ -333,6 +333,10 @@ body {
   display: none;
   white-space: nowrap;
 }
+.navmenu__input::placeholder {
+  color: #ffb17d;
+  font-size: 1.0625rem;
+}
 .navmenu__input.is--active {
   display: block;
   width: 100%;
@@ -430,6 +434,8 @@ body {
   backdrop-filter: blur(60px) saturate(100%);
   padding: 1.5rem;
   border-radius: 0.75rem;
+
+  display: none;
 }
 .submenu__platforms {
   width: 100%;
