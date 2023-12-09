@@ -192,10 +192,10 @@ body {
   z-index: 2;
 }
 .header__img {
-  width: 150px;
-  height: 40px;
 }
 .header__a {
+  width: 150px;
+  height: 40px;
 }
 .header__wrapper--normal {
   margin: auto;
