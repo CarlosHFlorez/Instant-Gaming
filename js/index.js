@@ -5,16 +5,9 @@ const navMenuInput = document.querySelector(`.navmenu__input`);
 const navMenuAdvanced = document.querySelector(`.navmenu__advanced`);
 const navMenuSvgMagnify = document.querySelector(`.navmenu__svg--magnify`);
 const navMenuClose = document.querySelector(`.navmenu__close`);
-
-const navMenuLink = document.querySelectorAll(`.navmenu__a`);
-
+const navMenuLi = document.querySelectorAll(`.navmenu__li`);
 const subMenu = document.querySelector(`.submenu`);
-
-// const subMenuPc = document.querySelector(`.submenu__pc`);
-// const subMenuPlaystation = document.querySelector(`.submenu__playstation`);
-// const subMenuXbox = document.querySelector(`.submenu__xbox`);
-// const subMenuNintendo = document.querySelector(`.submenu__nintendo`);
-
+const navMenu = document.querySelector(`.navmenu`);
 const subMenuCategory = document.querySelectorAll(`.submenu__category`);
 
 // Menú de búsqueda
@@ -35,23 +28,21 @@ navMenuClose.addEventListener(`click`, () => {
 });
 
 // Menú categorías
-navMenuLink.forEach((eachLink, i) => {
-  navMenuLink[i].addEventListener(`click`, () => {
+navMenuLi.forEach((eachLi, i) => {
+  navMenuLi[i].addEventListener(`click`, () => {
     let category = i;
-    subMenu.classList.remove(`is--active`);
-    subMenuCategory.forEach((eachCategory, j) => {
-      eachCategory.classList.remove(`is--active`);
-      subMenuCategory[category].classList.add(`is--active`);
-    });
-    subMenu.classList.add(`is--active`);
+    subMenu.classList.toggle(`is--active`);
+    subMenuCategory[category].classList.toggle(`is--active`);
 
-    navMenuLink[i].addEventListener(`mouseout`, () => {
+    navMenu.addEventListener(`mouseleave`, () => {
       subMenu.classList.remove(`is--active`);
       subMenuCategory[category].classList.remove(`is--active`);
     });
-    subMenu.addEventListener(`mouseout`, () => {
-      subMenu.classList.remove(`is--active`);
-      subMenuCategory[category].classList.remove(`is--active`);
+    navMenuLi.forEach((eachLi, j) => {
+      navMenuLi[j].addEventListener(`mouseenter`, () => {
+        subMenu.classList.remove(`is--active`);
+        subMenuCategory[category].classList.remove(`is--active`);
+      });
     });
   });
 });

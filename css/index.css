@@ -189,10 +189,13 @@ body {
   align-items: flex-start;
 }
 .header__h1 {
+  z-index: 2;
 }
 .header__img {
   width: 150px;
   height: 40px;
+}
+.header__a {
 }
 .header__wrapper--normal {
   margin: auto;
@@ -206,7 +209,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .menu__li {
   color: #ffffffcc;
@@ -251,6 +254,7 @@ body {
 }
 .login__a {
   padding: 0.5rem;
+  z-index: 1;
 }
 .menu__ul {
   display: flex;
@@ -266,13 +270,11 @@ body {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  backdrop-filter: blur(60px) saturate(100%);
+
+  gap: 1rem;
+
   padding: 0.5rem;
   border-radius: 4rem;
-
-  position: relative;
-
-  opacity: 1;
 }
 .navmenu__a {
   display: flex;
@@ -284,12 +286,13 @@ body {
 
   padding: 1rem;
 }
-.navmenu__a:hover {
-  .navmenu__svg--arrow {
-    fill: white;
-  }
-}
+
 .navmenu__li {
+}
+.navmenu__li:hover {
+  .navmenu__svg--arrow {
+    opacity: 1;
+  }
 }
 .navmenu__search {
   background: linear-gradient(10deg, #ff8000, transparent) #ff4020;
@@ -356,7 +359,8 @@ body {
 .navmenu__svg--arrow {
   width: 0.75rem;
   height: 0.75rem;
-  fill: #d3d3d3;
+  fill: white;
+  opacity: 0.4;
 }
 .navmenu__svg--magnify {
   width: 1rem;
@@ -418,11 +422,16 @@ body {
   fill: white;
 }
 .navmenu__ul {
-  padding-right: 4.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
+  backdrop-filter: blur(60px) saturate(100%);
+  padding: 0.5rem 5rem 0.5rem 1rem;
+  border-radius: 4rem;
+  position: relative;
+
+  z-index: 2;
 }
 .submenu {
   display: none;
@@ -437,6 +446,8 @@ body {
   backdrop-filter: blur(60px) saturate(100%);
   padding: 1.5rem;
   border-radius: 0.75rem;
+  box-shadow: 0 0 0 125rem rgba(16, 16, 16, 0.6);
+  z-index: 1;
 }
 .submenu__category {
   display: none;
@@ -556,7 +567,19 @@ body {
   width: 100%;
   min-height: 100vh;
 }
-
+/* body::after {
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.75);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+}
+body.is--overlayed::after {
+  visibility: visible;
+} */
 .parallax__picture {
 }
 .background__div {
