@@ -356,6 +356,9 @@ body {
 .navmenu__span {
   color: white;
 }
+.navmenu__span.is--hidden {
+  color: gray;
+}
 .navmenu__svg--arrow {
   width: 0.75rem;
   height: 0.75rem;
@@ -401,25 +404,13 @@ body {
 .navmenu__svg--magnify.is--hidden {
   display: none;
 }
-.navmenu__svg--nintendo {
+.navmenu__svg {
   width: 1.25rem;
   height: 1.25rem;
   fill: white;
 }
-.navmenu__svg--pc {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
-}
-.navmenu__svg--ps {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
-}
-.navmenu__svg--xbox {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
+.navmenu__svg.is--hidden {
+  fill: gray;
 }
 .navmenu__ul {
   display: flex;
@@ -527,7 +518,6 @@ body {
 }
 .grid__name {
 }
-
 .flex {
   width: 100%;
   display: flex;
@@ -567,19 +557,6 @@ body {
   width: 100%;
   min-height: 100vh;
 }
-/* body::after {
-  position: absolute;
-  content: "";
-  background: rgba(0, 0, 0, 0.75);
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  visibility: hidden;
-}
-body.is--overlayed::after {
-  visibility: visible;
-} */
 .parallax__picture {
 }
 .background__div {

@@ -9,6 +9,8 @@ const navMenuLi = document.querySelectorAll(`.navmenu__li`);
 const subMenu = document.querySelector(`.submenu`);
 const navMenu = document.querySelector(`.navmenu`);
 const subMenuCategory = document.querySelectorAll(`.submenu__category`);
+const navMenuSpan = document.querySelectorAll(`.navmenu__span`);
+const navMenuSvg = document.querySelectorAll(`.navmenu__svg`);
 
 // Menú de búsqueda
 navMenuSearch.addEventListener(`click`, () => {
@@ -33,15 +35,36 @@ navMenuLi.forEach((eachLi, i) => {
     let category = i;
     subMenu.classList.toggle(`is--active`);
     subMenuCategory[category].classList.toggle(`is--active`);
+    navMenuSpan.forEach((eachSpan, k) => {
+      eachSpan.classList.toggle(`is--hidden`);
+      navMenuSpan[category].classList.remove(`is--hidden`);
+    });
+    navMenuSvg.forEach((eachSvg, p) => {
+      eachSvg.classList.toggle(`is--hidden`);
+      navMenuSvg[category].classList.remove(`is--hidden`);
+    });
 
     navMenu.addEventListener(`mouseleave`, () => {
       subMenu.classList.remove(`is--active`);
       subMenuCategory[category].classList.remove(`is--active`);
+      navMenuSpan.forEach((eachSpan, k) => {
+        eachSpan.classList.remove(`is--hidden`);
+      });
+      navMenuSvg.forEach((eachSvg, p) => {
+        eachSvg.classList.remove(`is--hidden`);
+      });
     });
+
     navMenuLi.forEach((eachLi, j) => {
       navMenuLi[j].addEventListener(`mouseenter`, () => {
         subMenu.classList.remove(`is--active`);
         subMenuCategory[category].classList.remove(`is--active`);
+        navMenuSpan.forEach((eachSpan, k) => {
+          eachSpan.classList.remove(`is--hidden`);
+        });
+        navMenuSvg.forEach((eachSvg, p) => {
+          eachSvg.classList.remove(`is--hidden`);
+        });
       });
     });
   });
