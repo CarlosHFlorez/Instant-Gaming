@@ -11,6 +11,8 @@ const navMenu = document.querySelector(`.navmenu`);
 const subMenuCategory = document.querySelectorAll(`.submenu__category`);
 const navMenuSpan = document.querySelectorAll(`.navmenu__span`);
 const navMenuSvg = document.querySelectorAll(`.navmenu__svg`);
+const listingVideo = document.querySelectorAll(`.listing__video`);
+const listingLi = document.querySelectorAll(`.listing__li`);
 
 // Menú de búsqueda
 navMenuSearch.addEventListener(`click`, () => {
@@ -67,5 +69,16 @@ navMenuLi.forEach((eachLi, i) => {
         });
       });
     });
+  });
+});
+
+//Videos on hover
+listingLi.forEach((eachLi, i) => {
+  listingLi[i].addEventListener(`mouseenter`, () => {
+    listingVideo[i].play();
+  });
+  listingLi[i].addEventListener(`mouseleave`, () => {
+    listingVideo[i].pause();
+    listingVideo[i].currentTime = 0;
   });
 });
