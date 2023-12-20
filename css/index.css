@@ -571,16 +571,20 @@ body {
 }
 
 .trends__section,
-.reservations__div {
+.reservations__section,
+.bestseller__section {
   width: 100%;
   min-height: 75svh;
+  padding: 3.75rem 0;
 }
 
 .trends__wrapper,
-.reservations__wrapper {
+.reservations__wrapper,
+.bestseller__wrapper {
 }
 .trends__column,
-.reservations__column {
+.reservations__column,
+.bestseller__column {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -588,7 +592,8 @@ body {
   gap: 3rem;
 }
 .trends__link,
-.reservations__link {
+.reservations__link,
+.bestseller__link {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -597,19 +602,22 @@ body {
   gap: 0.5rem;
 }
 .trends__svg,
-.reservations__svg {
+.reservations__svg,
+.bestseller__svg {
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 0.5rem;
   fill: var(--color-medium-light);
 }
 .trends__h2,
-.reservations__h2 {
+.reservations__h2,
+.bestseller__h2 {
   font-size: 2rem;
   font-weight: 500;
 }
 .trends__container,
-.reservations__container {
+.reservations__container,
+.bestseller__container {
 }
 .listing {
   width: 100%;
@@ -722,10 +730,10 @@ body {
   color: #448eef;
 }
 
-.trust__section {
+.trust__div {
   width: 100%;
   min-height: 10svh;
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
   background-color: var(--color-ultra-dark);
 }
 .trust__wrapper {
@@ -795,7 +803,7 @@ body {
 
 .partner__section {
   width: 100%;
-  margin: 3rem 0;
+  margin: 3rem 0 2rem 0;
   background-color: var(--color-medium-dark);
 }
 .partner__wrapper {
@@ -862,7 +870,7 @@ body {
   gap: 2rem;
 }
 .comments__li {
-  width: fit-content;
+  width: 25rem;
   height: fit-content;
   background-color: var(--color-medium-dark);
   padding: 1rem;
@@ -904,7 +912,7 @@ body {
   height: 12px;
 }
 .comments__link {
-  width: 250px;
+  width: 15rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -920,6 +928,10 @@ body {
   gap: 2rem;
 }
 .comments__p {
+  font-size: 15px;
+  color: var(--color-light);
 }
 .comments__span {
+  font-size: 13px;
+  color: var(--color-white);
 }
