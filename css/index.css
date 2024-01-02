@@ -566,6 +566,7 @@ body {
 }
 .background__div {
   clip-path: polygon(0% 90%, 0% 0%, 100% 0%, 100% 100%);
+  position: relative;
 }
 .background__a {
 }
@@ -674,7 +675,8 @@ body {
 
   opacity: 0;
 }
-.listing__discount {
+.listing__discount,
+.offer__discount {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -684,7 +686,8 @@ body {
   z-index: 2;
   font-weight: 500;
 }
-.listing__discount::after {
+.listing__discount::after,
+.offer__discount::after {
   transform: skewX(16deg);
   width: 100%;
   border-radius: 6px 3px;
@@ -934,4 +937,26 @@ body {
 .comments__span {
   font-size: 13px;
   color: var(--color-white);
+}
+.offer {
+  position: absolute;
+  bottom: 40%;
+  left: 18%;
+}
+.offer__title {
+  font-size: 2.5rem;
+}
+.offer__container {
+  width: fit-content;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.offer__discount {
+  position: relative;
+}
+.offer__price {
+  font-size: 2.5rem;
 }
