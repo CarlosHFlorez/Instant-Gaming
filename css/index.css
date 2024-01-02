@@ -573,7 +573,8 @@ body {
 
 .trends__section,
 .reservations__section,
-.bestseller__section {
+.bestseller__section,
+.reviews__section {
   width: 100%;
   min-height: 75svh;
   padding: 3.75rem 0;
@@ -581,11 +582,13 @@ body {
 
 .trends__wrapper,
 .reservations__wrapper,
-.bestseller__wrapper {
+.bestseller__wrapper,
+.reviews__wrapper {
 }
 .trends__column,
 .reservations__column,
-.bestseller__column {
+.bestseller__column,
+.reviews__column {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -594,7 +597,8 @@ body {
 }
 .trends__link,
 .reservations__link,
-.bestseller__link {
+.bestseller__link,
+.reviews__link {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -604,7 +608,8 @@ body {
 }
 .trends__svg,
 .reservations__svg,
-.bestseller__svg {
+.bestseller__svg,
+.reviews__svg {
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 0.5rem;
@@ -612,7 +617,8 @@ body {
 }
 .trends__h2,
 .reservations__h2,
-.bestseller__h2 {
+.bestseller__h2,
+.reviews__h2 {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -731,6 +737,69 @@ body {
 .listing__date {
   font-size: 13px;
   color: #448eef;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.cards__li {
+}
+.cards__article {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: var(--color-medium-dark);
+}
+.cards__link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.cards__img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  transition: all 0.3s ease;
+
+  opacity: 1;
+}
+.cards__video {
+  border-radius: 10px;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all 0.3s ease;
+
+  opacity: 0;
+}
+.cards__info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+.cards__icons {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.cards__p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .trust__div {
