@@ -15,6 +15,11 @@ const listingVideo = document.querySelectorAll(`.listing__video`);
 const listingLi = document.querySelectorAll(`.listing__li`);
 const cardsLi = document.querySelectorAll(`.cards__li`);
 const cardsVideo = document.querySelectorAll(`.cards__video`);
+const listingIndieLi = document.querySelectorAll(`.listingindie__li`);
+const listingIndieVideo = document.querySelectorAll(`.listingindie__video`);
+
+//Para el slider
+const commentsLi = document.querySelectorAll(`.comments__li`);
 
 // Menú de búsqueda
 navMenuSearch.addEventListener(`click`, () => {
@@ -93,3 +98,14 @@ cardsLi.forEach((eachLi, i) => {
     cardsVideo[i].currentTime = 0;
   });
 });
+listingIndieLi.forEach((eachLi, i) => {
+  listingIndieLi[i].addEventListener(`mouseenter`, () => {
+    listingIndieVideo[i].play();
+  });
+  listingIndieLi[i].addEventListener(`mouseleave`, () => {
+    listingIndieVideo[i].pause();
+    listingIndieVideo[i].currentTime = 0;
+  });
+});
+
+//Slider

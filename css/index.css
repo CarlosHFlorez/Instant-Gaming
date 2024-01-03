@@ -179,6 +179,7 @@ body {
   margin: auto;
   width: 65%;
 }
+
 .header {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
@@ -562,9 +563,11 @@ body {
   width: 100%;
   min-height: 100svh;
 }
-.parallax__picture {
+.parallax__picture,
+.indie__picture {
 }
-.background__div {
+.background__div,
+.indie__div {
   clip-path: polygon(0% 90%, 0% 0%, 100% 0%, 100% 100%);
   position: relative;
 }
@@ -574,7 +577,8 @@ body {
 .trends__section,
 .reservations__section,
 .bestseller__section,
-.reviews__section {
+.reviews__section,
+.indie__section {
   width: 100%;
   min-height: 75svh;
   padding: 3.75rem 0;
@@ -589,17 +593,18 @@ body {
 .reservations__column,
 .bestseller__column,
 .reviews__column {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 3rem;
 }
 .trends__link,
 .reservations__link,
 .bestseller__link,
-.reviews__link {
-  width: 100%;
+.reviews__link,
+.indie__link {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -609,16 +614,18 @@ body {
 .trends__svg,
 .reservations__svg,
 .bestseller__svg,
-.reviews__svg {
-  width: 1.5rem;
-  height: 1.5rem;
+.reviews__svg,
+.indie__svg {
+  width: 1.75rem;
+  height: 1.75rem;
   margin-top: 0.5rem;
   fill: var(--color-medium-light);
 }
 .trends__h2,
 .reservations__h2,
 .bestseller__h2,
-.reviews__h2 {
+.reviews__h2,
+.indie__h2 {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -632,23 +639,39 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
-.listing__li {
+.listingindie {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+
+  padding: 40px 0;
+}
+.listing__li,
+.listingindie__li {
   padding-bottom: 1rem;
   transition: all 0.3s ease;
 }
-.listing__li:hover {
-  .listing__link {
+.listing__li:hover,
+.listingindie__li:hover {
+  .listing__link,
+  .listingindie {
     transform: scale(1.1);
   }
-  .listing__img {
+  .listing__img,
+  .listingindie__img {
     opacity: 0;
   }
-  .listing__video {
+  .listing__video,
+  .listingindie__video {
     opacity: 1;
   }
 }
 
-.listing__article {
+.listing__article,
+.listingindie__article {
   width: fit-content;
   display: flex;
   flex-flow: column nowrap;
@@ -656,18 +679,21 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.listing__link {
+.listing__link,
+.listingindie__link {
   position: relative;
   transition: all 0.3s ease;
 }
 
-.listing__img {
+.listing__img,
+.listingindie__img {
   border-radius: 10px;
   transition: all 0.3s ease;
 
   opacity: 1;
 }
-.listing__video {
+.listing__video,
+.listingindie__video {
   border-radius: 10px;
 
   width: 100%;
@@ -682,7 +708,8 @@ body {
   opacity: 0;
 }
 .listing__discount,
-.offer__discount {
+.offer__discount,
+.listingindie__discount {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -693,7 +720,8 @@ body {
   font-weight: 500;
 }
 .listing__discount::after,
-.offer__discount::after {
+.offer__discount::after,
+.listingindie__discount::after {
   transform: skewX(16deg);
   width: 100%;
   border-radius: 6px 3px;
@@ -705,16 +733,19 @@ body {
   right: -4px;
   z-index: -1;
 }
-.listing__info {
+.listing__info,
+.listingindie__info {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: baseline;
 }
-.listing__name {
+.listing__name,
+.listingindie__name {
 }
-.listing__price {
+.listing__price,
+.listingindie__price {
   font-size: 1.5em;
 }
 
@@ -740,11 +771,11 @@ body {
 }
 
 .cards {
-  width: 100vw;
-  padding: 0 30px;
+  width: 100%;
+  padding: 40px 30px 0;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .cards__li {
@@ -952,6 +983,7 @@ body {
   width: 100%;
   min-height: 20svh;
   background-color: var(--color-dark);
+  overflow: hidden;
 }
 .comments__wrapper {
 }
@@ -1051,4 +1083,43 @@ body {
 }
 .offer__price {
   font-size: 2.5rem;
+}
+
+.indie__background {
+  width: 100%;
+  min-height: 46.875rem;
+
+  padding-top: 60px;
+
+  background-image: linear-gradient(80deg, rgba(50, 50, 50, 0.4), #323232 35%), url(/assets/img/deadcells.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: relative;
+}
+.indie__column {
+  width: 45%;
+
+  margin-left: auto;
+  margin-right: 15%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.indie__character {
+  width: 100%;
+  min-height: 600px;
+  background-image: url(/assets/img/beheaded.png);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  top: 10%;
+  left: 18%;
+
+  pointer-events: none;
 }
