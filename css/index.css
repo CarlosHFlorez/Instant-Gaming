@@ -1239,7 +1239,7 @@ body {
   filter: brightness(50%) saturate(75%);
 }
 
-.catgrid__title {
+.catgrid__name {
   font-size: 27px;
   position: absolute;
   left: 5%;
