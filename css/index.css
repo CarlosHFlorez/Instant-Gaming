@@ -191,6 +191,7 @@ body {
   z-index: 1;
 }
 .header__div {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -579,7 +580,8 @@ body {
 .bestseller__section,
 .reviews__section,
 .indie__section,
-.news__section {
+.news__section,
+.categories__section {
   width: 100%;
   min-height: 75svh;
   padding: 3.75rem 0;
@@ -589,13 +591,15 @@ body {
 .reservations__wrapper,
 .bestseller__wrapper,
 .reviews__wrapper,
-.news__section {
+.news__wrapper,
+.categories__wrapper {
 }
 .trends__column,
 .reservations__column,
 .bestseller__column,
 .reviews__column,
-.news__column {
+.news__column,
+.categories__column {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -631,7 +635,8 @@ body {
 .bestseller__h2,
 .reviews__h2,
 .indie__h2,
-.news__h2 {
+.news__h2,
+.categories__h2 {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -875,7 +880,7 @@ body {
 .trust__div {
   width: 100%;
   min-height: 10svh;
-  /* margin: 3rem 0; */
+
   background-color: var(--color-ultra-dark);
 }
 .trust__wrapper {
@@ -1113,6 +1118,8 @@ body {
   background-size: contain;
 
   position: relative;
+
+  overflow: hidden;
 }
 .indie__column {
   width: 45%;
@@ -1183,4 +1190,66 @@ body {
 .news__separator {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   margin-top: 30px;
+}
+
+.categories__flex {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.categories__btn {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-medium-dark);
+  outline: 1px solid var(--color-medium-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.categories__span {
+  font-size: 19px;
+  font-weight: 600;
+}
+.categories__container {
+}
+.catgrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+.catgrid__cat {
+}
+.catgrid__cat:hover {
+  .catgrid__icon {
+    height: 115%;
+  }
+}
+.catgrid__a {
+  width: 380px;
+  height: 220px;
+  position: relative;
+}
+
+.catgrid__background {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+
+  filter: brightness(50%) saturate(75%);
+}
+
+.catgrid__title {
+  font-size: 27px;
+  position: absolute;
+  left: 5%;
+  top: calc(100% - (253px / 2));
+}
+.catgrid__icon {
+  width: auto;
+  height: 110%;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
