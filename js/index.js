@@ -17,6 +17,8 @@ const cardsLi = document.querySelectorAll(`.cards__li`);
 const cardsVideo = document.querySelectorAll(`.cards__video`);
 const listingIndieLi = document.querySelectorAll(`.listingindie__li`);
 const listingIndieVideo = document.querySelectorAll(`.listingindie__video`);
+const listingWeekLi = document.querySelectorAll(`.listingweek__li`);
+const listingWeekVideo = document.querySelectorAll(`.listingweek__video`);
 
 //Para el slider
 const commentsLi = document.querySelectorAll(`.comments__li`);
@@ -105,6 +107,15 @@ listingIndieLi.forEach((eachLi, i) => {
   listingIndieLi[i].addEventListener(`mouseleave`, () => {
     listingIndieVideo[i].pause();
     listingIndieVideo[i].currentTime = 0;
+  });
+});
+listingWeekLi.forEach((eachLi, i) => {
+  listingWeekLi[i].addEventListener(`mouseenter`, () => {
+    listingWeekVideo[i].play();
+  });
+  listingWeekLi[i].addEventListener(`mouseleave`, () => {
+    listingWeekVideo[i].pause();
+    listingWeekVideo[i].currentTime = 0;
   });
 });
 

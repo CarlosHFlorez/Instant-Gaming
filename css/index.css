@@ -670,29 +670,44 @@ body {
   align-items: center;
   gap: 1.875rem;
 }
+.listingweek {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+}
 .listing__li,
-.listingindie__li {
+.listingindie__li,
+.listingweek__li {
   padding-bottom: 1rem;
   transition: all 0.3s ease;
 }
 .listing__li:hover,
-.listingindie__li:hover {
+.listingindie__li:hover,
+.listingweek__li:hover {
   .listing__link,
-  .listingindie {
+  .listingindie,
+  .listingweek__link {
     transform: scale(1.1);
   }
   .listing__img,
-  .listingindie__img {
+  .listingindie__img,
+  .listingweek__img {
     opacity: 0;
   }
   .listing__video,
-  .listingindie__video {
+  .listingindie__video,
+  .listingweek__video {
     opacity: 1;
   }
 }
 
 .listing__article,
-.listingindie__article {
+.listingindie__article,
+.listingweek__article {
   width: fit-content;
   display: flex;
   flex-flow: column nowrap;
@@ -701,7 +716,8 @@ body {
   gap: 0.5rem;
 }
 .listing__link,
-.listingindie__link {
+.listingindie__link,
+.listingweek__link {
   position: relative;
   transition: all 0.3s ease;
 }
@@ -709,6 +725,13 @@ body {
 .listing__img,
 .listingindie__img {
   border-radius: 10px;
+  transition: all 0.3s ease;
+
+  opacity: 1;
+}
+.listingweek__img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   transition: all 0.3s ease;
 
   opacity: 1;
@@ -728,9 +751,25 @@ body {
 
   opacity: 0;
 }
+.listingweek__video {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all 0.3s ease;
+
+  opacity: 0;
+}
 .listing__discount,
 .offer__discount,
-.listingindie__discount {
+.listingindie__discount,
+.listingweek__discount {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -742,7 +781,8 @@ body {
 }
 .listing__discount::after,
 .offer__discount::after,
-.listingindie__discount::after {
+.listingindie__discount::after,
+.listingweek__discount:after {
   transform: skewX(16deg);
   width: 100%;
   border-radius: 6px 3px;
@@ -755,7 +795,8 @@ body {
   z-index: -1;
 }
 .listing__info,
-.listingindie__info {
+.listingindie__info,
+.listingweek__info {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -765,8 +806,16 @@ body {
 .listing__name,
 .listingindie__name {
 }
+.listingweek__name {
+  width: 12rem;
+  padding-right: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .listing__price,
-.listingindie__price {
+.listingindie__price,
+.listingweek__price {
   font-size: 1.5em;
 }
 
@@ -1258,4 +1307,78 @@ body {
   bottom: 0;
 
   transition: all 0.3s ease;
+}
+
+.background__extension {
+  min-height: 50vh;
+  background-color: #489bca;
+  background-image: radial-gradient(circle at center bottom, #489bca 0, #154483 29%, #0f0f1b 73%);
+
+  clip-path: polygon(0% 90%, 0% 0%, 100% 0%, 100% 100%);
+}
+.background__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.background__img {
+  width: 100%;
+  height: 560px;
+  background-image: url(/assets/img/extension3.png);
+  background-position: right 50px;
+  background-repeat: no-repeat;
+}
+.content {
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.content__title {
+  font-size: 27px;
+  font-weight: 600;
+}
+.content__p {
+  font-size: 17px;
+}
+.content__link {
+  width: fit-content;
+  font-size: 17px;
+  padding: 1rem;
+  background: var(--fire-gradient);
+  border-radius: 8px;
+}
+
+.listingweek__timer {
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-ultra-dark);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.listingweek__span {
+  color: var(--main-color);
+  font-size: 19px;
+  font-weight: 500;
+}
+.listingweek__offer {
+  font-size: 15px;
+  text-decoration: line-through;
+  color: var(--color-light);
+}
+.listingweek__svg {
+  width: 1rem;
+  height: 1rem;
+  padding-top: 0.25rem;
+  fill: var(--color-medium-light);
 }
