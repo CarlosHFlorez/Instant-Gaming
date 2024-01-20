@@ -161,7 +161,7 @@ svg {
 
 /* Configuramos la tipografía para toda la web */
 body {
-  min-height: 100svh;
+  min-height: 100vh;
   font-size: 100%;
   font-family: "Barlow", sans-serif;
   font-weight: 400;
@@ -187,6 +187,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
 
   z-index: 2;
 }
@@ -1361,6 +1362,7 @@ body {
   width: 100%;
   min-height: 50svh;
   padding: 3.75rem 0;
+  overflow: hidden;
 }
 
 .listingweek__timer {
