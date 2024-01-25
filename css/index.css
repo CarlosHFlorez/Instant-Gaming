@@ -1270,8 +1270,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  row-gap: 4rem;
-  column-gap: 1rem;
+  gap: 4rem 1rem;
 }
 .catgrid__cat {
   width: fit-content;
@@ -1435,15 +1434,26 @@ body {
   min-height: fit-content;
   background: var(--color-ultra-dark);
   padding: 3rem 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 .footer__wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
+
+  border-bottom: 1px solid var(--color-dark);
+  padding-bottom: 30px;
 }
 .footer__trust {
-  width: 100%;
+}
+.trust {
+  width: 70%;
 }
 .footer__terms {
   width: 100%;
@@ -1472,7 +1482,7 @@ body {
   gap: 0.5rem;
 }
 .terms__link {
-  font-size: 17px;
+  font-size: 15px;
 }
 .terms__link:hover {
   color: var(--main-color);
@@ -1488,10 +1498,10 @@ body {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-end;
 
-  gap:6.25rem;
+  gap: 6.25rem;
 }
 .rrss__div {
   width: 100%;
@@ -1502,21 +1512,40 @@ body {
   gap: 1rem;
 }
 .rrss__icon {
-  width: 12%;
-  height: 12%;
 }
 .rrss__apps {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap:2rem;
+  gap: 2rem;
 }
 .rrss__img {
-  width: 40%;
+}
+.rrss__link {
+  transition: all 0.3s ease;
+}
+.rrss__link:hover {
+  transform: scale(1.15);
+}
+.rrss__a {
+  width: 32%;
   height: auto;
   padding: 1rem 1.5rem;
   background-color: var(--color-very-dark);
   border-radius: 0.5rem;
   border: 1px solid var(--color-light);
+
+  transition: all 0.3s ease;
+}
+.rrss__a:hover {
+  background-color: var(--color-dark);
+}
+.footer__copy {
+  width: 100%;
+  text-align: center;
+}
+.footer__span {
+  font-size: 15px;
+  color: var(--color-white);
 }
