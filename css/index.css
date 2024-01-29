@@ -190,6 +190,12 @@ body {
   right: 0;
 
   z-index: 2;
+
+  transition: all 0.2s ease;
+}
+.header.is--blurred {
+  backdrop-filter: blur(60px) saturate(100%);
+  background: rgba(0, 0, 0, 0.75);
 }
 .header__div {
   width: 100%;
@@ -270,6 +276,11 @@ body {
   align-items: center;
 
   gap: 1.875rem;
+
+  transition: all 0.3s ease;
+}
+.menu__ul.is--hidden {
+  display: none;
 }
 .navmenu {
   width: 100%;

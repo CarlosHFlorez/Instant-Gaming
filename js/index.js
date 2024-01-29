@@ -19,6 +19,9 @@ const listingIndieLi = document.querySelectorAll(`.listingindie__li`);
 const listingIndieVideo = document.querySelectorAll(`.listingindie__video`);
 const listingWeekLi = document.querySelectorAll(`.listingweek__li`);
 const listingWeekVideo = document.querySelectorAll(`.listingweek__video`);
+const header = document.querySelector(`.header`);
+const trendsSection = document.querySelector(`.trends__section`);
+const menuUl = document.querySelector(`.menu__ul`);
 
 //Para el slider
 const commentsLi = document.querySelectorAll(`.comments__li`);
@@ -119,4 +122,22 @@ listingWeekLi.forEach((eachLi, i) => {
   });
 });
 
-//Slider
+//Header
+let observerHeaderOptions = {
+  root: null,
+  rootMargin: `0px`,
+  threshold: [0.6],
+};
+let observerHeaderCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      header.classList.add(`is--blurred`);
+      menuUl.classList.add(`is--hidden`);
+    } else {
+      header.classList.remove(`is--blurred`);
+      menuUl.classList.remove(`is--hidden`);
+    }
+  });
+};
+let observerHeader = new IntersectionObserver(observerHeaderCallback, observerHeaderOptions);
+observerHeader.observe(trendsSection);
