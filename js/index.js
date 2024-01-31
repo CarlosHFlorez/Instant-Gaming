@@ -8,6 +8,7 @@ const navMenuClose = document.querySelector(`.navmenu__close`);
 const navMenuLi = document.querySelectorAll(`.navmenu__li`);
 const subMenu = document.querySelector(`.submenu`);
 const navMenu = document.querySelector(`.navmenu`);
+const navMenuUl = document.querySelector(`.navmenu__ul`);
 const subMenuCategory = document.querySelectorAll(`.submenu__category`);
 const navMenuSpan = document.querySelectorAll(`.navmenu__span`);
 const navMenuSvg = document.querySelectorAll(`.navmenu__svg`);
@@ -20,8 +21,11 @@ const listingIndieVideo = document.querySelectorAll(`.listingindie__video`);
 const listingWeekLi = document.querySelectorAll(`.listingweek__li`);
 const listingWeekVideo = document.querySelectorAll(`.listingweek__video`);
 const header = document.querySelector(`.header`);
+const headerDiv = document.querySelector(`.header__div`);
 const trendsSection = document.querySelector(`.trends__section`);
 const menuUl = document.querySelector(`.menu__ul`);
+const menu = document.querySelector(`.menu`);
+const observerBg = document.querySelector(`#observer__bg`);
 
 //Para el slider
 const commentsLi = document.querySelectorAll(`.comments__li`);
@@ -126,18 +130,24 @@ listingWeekLi.forEach((eachLi, i) => {
 let observerHeaderOptions = {
   root: null,
   rootMargin: `0px`,
-  threshold: [0.6],
+  threshold: [0.9],
 };
 let observerHeaderCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      header.classList.add(`is--blurred`);
-      menuUl.classList.add(`is--hidden`);
-    } else {
       header.classList.remove(`is--blurred`);
       menuUl.classList.remove(`is--hidden`);
+      navMenuUl.classList.remove(`is--hidden`);
+      headerDiv.classList.remove(`is--hidden`);
+      menu.classList.remove(`is--deactivated`);
+    } else {
+      header.classList.add(`is--blurred`);
+      menuUl.classList.add(`is--hidden`);
+      navMenuUl.classList.add(`is--hidden`);
+      headerDiv.classList.add(`is--hidden`);
+      menu.classList.add(`is--deactivated`);
     }
   });
 };
 let observerHeader = new IntersectionObserver(observerHeaderCallback, observerHeaderOptions);
-observerHeader.observe(trendsSection);
+observerHeader.observe(observerBg);
