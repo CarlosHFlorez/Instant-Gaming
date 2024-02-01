@@ -1116,6 +1116,9 @@ body {
   font-weight: 500;
   white-space: nowrap;
 }
+.partner__btn:hover {
+  background: var(--fire-gradient-hover);
+}
 
 .comments__container {
   width: 100%;
