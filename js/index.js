@@ -62,7 +62,7 @@ navMenuLi.forEach((eachLi, i) => {
       navMenuSvg[category].classList.remove(`is--hidden`);
     });
 
-    navMenu.addEventListener(`mouseleave`, () => {
+    subMenu.addEventListener(`mouseleave`, () => {
       subMenu.classList.remove(`is--active`);
       subMenuCategory[category].classList.remove(`is--active`);
       navMenuSpan.forEach((eachSpan, k) => {
@@ -75,6 +75,16 @@ navMenuLi.forEach((eachLi, i) => {
 
     navMenuLi.forEach((eachLi, j) => {
       navMenuLi[j].addEventListener(`mouseenter`, () => {
+        subMenu.classList.remove(`is--active`);
+        subMenuCategory[category].classList.remove(`is--active`);
+        navMenuSpan.forEach((eachSpan, k) => {
+          eachSpan.classList.remove(`is--hidden`);
+        });
+        navMenuSvg.forEach((eachSvg, p) => {
+          eachSvg.classList.remove(`is--hidden`);
+        });
+      });
+      navMenuSearch.addEventListener(`mouseenter`, () => {
         subMenu.classList.remove(`is--active`);
         subMenuCategory[category].classList.remove(`is--active`);
         navMenuSpan.forEach((eachSpan, k) => {
@@ -135,17 +145,23 @@ let observerHeaderOptions = {
 let observerHeaderCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      header.classList.remove(`is--blurred`);
+      header.style.setProperty("--opacity", 0);
       menuUl.classList.remove(`is--hidden`);
       navMenuUl.classList.remove(`is--hidden`);
       headerDiv.classList.remove(`is--hidden`);
       menu.classList.remove(`is--deactivated`);
+      navMenuSvg.forEach((eachSvg, i) => {
+        eachSvg.classList.remove(`is--deactivated`);
+      });
     } else {
-      header.classList.add(`is--blurred`);
+      header.style.setProperty("--opacity", 1);
       menuUl.classList.add(`is--hidden`);
       navMenuUl.classList.add(`is--hidden`);
       headerDiv.classList.add(`is--hidden`);
       menu.classList.add(`is--deactivated`);
+      navMenuSvg.forEach((eachSvg, i) => {
+        eachSvg.classList.add(`is--deactivated`);
+      });
     }
   });
 };
