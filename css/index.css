@@ -757,7 +757,7 @@ body {
 .listingindie__li:hover,
 .listingweek__li:hover {
   .listing__link,
-  .listingindie,
+  .listingindie__link,
   .listingweek__link {
     transform: scale(1.1);
   }
