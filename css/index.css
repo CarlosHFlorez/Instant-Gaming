@@ -1494,6 +1494,7 @@ body {
 .actions__span {
   font-size: 15px;
   color: var(--color-light);
+  text-align: center;
 }
 .actions__link {
   width: fit-content;
