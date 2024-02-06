@@ -150,6 +150,7 @@ let observerHeaderCallback = (entries) => {
       navMenuUl.classList.remove(`is--hidden`);
       headerDiv.classList.remove(`is--hidden`);
       menu.classList.remove(`is--deactivated`);
+      menu.classList.remove(`is--hidden`);
       navMenuSvg.forEach((eachSvg, i) => {
         eachSvg.classList.remove(`is--deactivated`);
       });
@@ -159,6 +160,7 @@ let observerHeaderCallback = (entries) => {
       navMenuUl.classList.add(`is--hidden`);
       headerDiv.classList.add(`is--hidden`);
       menu.classList.add(`is--deactivated`);
+      menu.classList.add(`is--hidden`);
       navMenuSvg.forEach((eachSvg, i) => {
         eachSvg.classList.add(`is--deactivated`);
       });
