@@ -1795,4 +1795,55 @@ body {
     width: 10rem;
     height: auto;
   }
+  .news__img {
+    min-width: 35%;
+  }
+}
+@media (max-width: 425px) {
+  .listing {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    overflow: scroll;
+  }
+  .listing__li,
+  .listingindie__li {
+    min-width: 75%;
+  }
+  .partner__section {
+    display: none;
+  }
+  .cards {
+    gap: 5rem;
+    justify-content: flex-start;
+    padding: 40px 10px;
+  }
+  .cards__article {
+    width: 15rem;
+  }
+  .indie__section,
+  .reviews__section {
+    padding: 0;
+  }
+  .indie__background {
+    background-image: none;
+  }
+  .indie__character {
+    display: none;
+  }
+  .listingindie {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    overflow: scroll;
+  }
+  .indie__column {
+    width: 95%;
+    margin: auto;
+    justify-content: flex-start;
+  }
 }

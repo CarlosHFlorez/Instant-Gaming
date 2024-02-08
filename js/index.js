@@ -145,7 +145,7 @@ let observerHeaderOptions = {
 let observerHeaderCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      header.style.setProperty("--opacity", 0);
+      header.style.setProperty(`--opacity`, 0);
       menuUl.classList.remove(`is--hidden`);
       navMenuUl.classList.remove(`is--hidden`);
       headerDiv.classList.remove(`is--hidden`);
@@ -155,7 +155,7 @@ let observerHeaderCallback = (entries) => {
         eachSvg.classList.remove(`is--deactivated`);
       });
     } else {
-      header.style.setProperty("--opacity", 1);
+      header.style.setProperty(`--opacity`, 1);
       menuUl.classList.add(`is--hidden`);
       navMenuUl.classList.add(`is--hidden`);
       headerDiv.classList.add(`is--hidden`);
