@@ -1343,15 +1343,19 @@ body {
   align-items: flex-start;
 }
 .categories__btn {
-  padding: 0.75rem 1rem;
-  background-color: var(--color-medium-dark);
+  padding: 0.625rem 1rem;
+  background-color: var(--color-very-dark);
   outline: 1px solid var(--color-medium-light);
   border-radius: 8px;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
+.categories__btn:hover {
+  background-color: var(--color-medium-dark);
+}
 .categories__span {
-  font-size: 19px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
 }
 .categories__container {
 }
