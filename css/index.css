@@ -765,6 +765,9 @@ body {
   padding-bottom: 1rem;
   transition: all 0.3s ease;
 }
+.listingweek__li {
+  width: 30%;
+}
 .listing__li:hover,
 .listingindie__li:hover,
 .listingweek__li:hover {
@@ -788,7 +791,7 @@ body {
 .listing__article,
 .listingindie__article,
 .listingweek__article {
-  width: fit-content;
+  /* width: fit-content; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -993,7 +996,7 @@ body {
 }
 .cards__text {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 0 1.5rem 1.5rem;
 
@@ -1094,12 +1097,13 @@ body {
 }
 .partner__container {
   width: 100%;
-  min-height: 35svh;
+  height: 30svh;
+  min-height: 20rem;
   position: relative;
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .partner__img {
@@ -1115,7 +1119,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  margin: 3rem 0 3rem 20rem;
+  margin-left: 35%;
 
   gap: 2rem;
 }
@@ -1292,7 +1296,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 .news__img {
@@ -1336,7 +1340,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .categories__btn {
   padding: 0.75rem 1rem;
@@ -1358,7 +1362,7 @@ body {
   gap: 4rem 1rem;
 }
 .catgrid__cat {
-  width: fit-content;
+  min-width: 75%;
   z-index: 1;
 }
 .catgrid__cat:hover {
@@ -1366,9 +1370,10 @@ body {
     height: 115%;
   }
 }
+.catgrid__cat.is--hidden {
+  display: none;
+}
 .catgrid__a {
-  width: 380px;
-  height: 220px;
   position: relative;
 }
 
@@ -1384,12 +1389,15 @@ body {
   font-size: 27px;
   position: absolute;
   left: 5%;
-  top: calc(100% - (253px / 2));
+  /* top: calc(100% - (253px / 2)); */
+  top: 40%;
   z-index: 1;
 }
 .catgrid__icon {
   width: auto;
   height: 110%;
+
+  border-radius: 0.625rem;
 
   position: absolute;
   right: 0;
@@ -1419,13 +1427,13 @@ body {
   background-repeat: no-repeat;
 }
 .content {
-  width: 100%;
-
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
   gap: 0.75rem;
+
+  position: absolute;
 }
 .content__title {
   font-size: 27px;
@@ -1435,7 +1443,7 @@ body {
   font-size: 17px;
 }
 .content__link {
-  width: fit-content;
+  width: max-content;
   font-size: 17px;
   padding: 1rem;
   background: var(--fire-gradient);
@@ -1500,6 +1508,7 @@ body {
 .actions__h5 {
   font-size: 23px;
   font-weight: 500;
+  text-align: center;
 }
 .actions__span {
   font-size: 15px;
@@ -1550,10 +1559,9 @@ body {
   gap: 1rem;
 }
 .terms {
-  width: 100%;
+  width: 60%;
 }
 .terms__ul {
-  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -1598,8 +1606,8 @@ body {
   gap: 1rem;
 }
 .rrss__icon {
-  max-width: 3rem;
-  max-width: auto;
+  width: 10rem;
+  height: auto;
 }
 .rrss__apps {
   display: flex;
@@ -1640,17 +1648,20 @@ body {
 
 /* media queries */
 
-@media (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .narrow__wrapper {
     width: 85%;
   }
   .comments__ul {
     overflow: scroll;
+    scrollbar-width: none;
   }
   .listing {
     gap: 2rem;
   }
   .indie__character {
+    min-height: 500px;
+    top: 20%;
     left: 5%;
   }
   .indie__column {
@@ -1659,7 +1670,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .header {
     background: var(--color-ultra-dark);
     height: 60px;
@@ -1712,12 +1723,13 @@ body {
     gap: 1.25rem;
   }
   .cards__li {
-    width: calc(50% - 30px);
+    width: fit-content;
   }
   .listingindie {
     gap: 2rem;
   }
   .indie__character {
+    top: 15%;
     left: 5%;
     width: 75%;
     min-height: 450px;
@@ -1728,44 +1740,62 @@ body {
   }
   .catgrid {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    gap: 4rem 2rem;
   }
-  .catgrid__name {
-    top: calc(100% - (200px / 2));
-  }
-  .catgrid__a {
-    width: auto;
-    height: auto;
+  .content {
+    width: 20%;
   }
   .narrow__wrapper {
     width: 95%;
   }
-  .listingweek {
-    overflow: scroll;
-  }
   .trust__contain {
     overflow: scroll;
-  }
-  .trust {
-    width: 100%;
+    scrollbar-width: none;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .listing {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .background__extension {
+    display: none;
   }
   .cards {
     width: 100%;
     overflow: scroll;
+    scrollbar-width: none;
   }
   .cards__article {
     width: 20rem;
   }
-
+  .partner__img {
+    width: 40%;
+    height: auto;
+  }
+  .partner__btn {
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+  }
+  .partner__p {
+    font-size: 15px;
+  }
   .indie__character {
-    width: 50%;
-    min-height: 300px;
-    top: 25%;
+    width: 25%;
+    min-height: 350px;
+    top: 30%;
+  }
+  .catgrid {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+  .news__h4,
+  .news__date {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .news__p {
+    display: none;
+  }
+  .news__div {
+    gap: 0.5rem;
   }
   .footer__wrapper {
     flex-flow: column nowrap;
@@ -1782,6 +1812,13 @@ body {
   .rrss__apps {
     align-items: center;
   }
+  .terms,
+  .trust {
+    width: 100%;
+  }
+  .footer__terms {
+    align-items: center;
+  }
   .rrss__apps {
     justify-content: center;
   }
@@ -1791,15 +1828,36 @@ body {
   .rrss {
     gap: 2rem;
   }
+  .rrss__icon {
+    width: 3rem;
+    height: auto;
+  }
   .rrss__a {
     width: 10rem;
     height: auto;
   }
   .news__img {
-    min-width: 35%;
+    min-width: 40%;
+  }
+  .listingweek {
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .listingweek__li {
+    width: 100%;
   }
 }
-@media (max-width: 425px) {
+@media screen and (max-width: 500px) {
+  .trends__h2,
+  .reservations__h2,
+  .bestseller__h2,
+  .reviews__h2,
+  .indie__h2,
+  .news__h2,
+  .categories__h2,
+  .weeklyoffers__h2 {
+    font-size: 24px;
+  }
   .listing {
     display: flex;
     flex-flow: row nowrap;
@@ -1807,21 +1865,23 @@ body {
     align-items: flex-start;
     gap: 2rem;
     overflow: scroll;
+    scrollbar-width: none;
   }
   .listing__li,
-  .listingindie__li {
+  .listingindie__li,
+  .listingweek__li {
     min-width: 75%;
   }
-  .partner__section {
-    display: none;
-  }
   .cards {
-    gap: 5rem;
     justify-content: flex-start;
     padding: 40px 10px;
   }
   .cards__article {
     width: 15rem;
+  }
+  .partner__section,
+  .indie__character {
+    display: none;
   }
   .indie__section,
   .reviews__section {
@@ -1830,8 +1890,17 @@ body {
   .indie__background {
     background-image: none;
   }
-  .indie__character {
-    display: none;
+  .catgrid {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  .catgrid__icon {
+    height: 90%;
   }
   .listingindie {
     display: flex;
@@ -1840,10 +1909,14 @@ body {
     align-items: flex-start;
     gap: 2rem;
     overflow: scroll;
+    scrollbar-width: none;
   }
   .indie__column {
     width: 95%;
     margin: auto;
     justify-content: flex-start;
+  }
+  .listingweek__article {
+    width: 100%;
   }
 }

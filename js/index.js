@@ -26,6 +26,8 @@ const trendsSection = document.querySelector(`.trends__section`);
 const menuUl = document.querySelector(`.menu__ul`);
 const menu = document.querySelector(`.menu`);
 const observerBg = document.querySelector(`#observer__bg`);
+const categoriesBtn = document.querySelector(`.categories__btn`);
+const catGridCat = document.querySelectorAll(`.catgrid__cat`);
 
 //Para el slider
 const commentsLi = document.querySelectorAll(`.comments__li`);
@@ -169,3 +171,18 @@ let observerHeaderCallback = (entries) => {
 };
 let observerHeader = new IntersectionObserver(observerHeaderCallback, observerHeaderOptions);
 observerHeader.observe(observerBg);
+
+//Boton categorías
+
+const arrayCategories = Array.from(catGridCat);
+const arrayHidden = arrayCategories.slice(6, 26);
+catGridCat.forEach((eachCat, i) => {
+  if (i > 5) {
+    eachCat.classList.add(`is--hidden`);
+  }
+});
+categoriesBtn.addEventListener(`click`, () => {
+  arrayHidden.forEach((eachCat, i) => {
+    eachCat.classList.toggle(`is--hidden`);
+  });
+});
