@@ -641,8 +641,9 @@ body {
   width: 100%;
   min-height: 100svh;
 }
-.parallax__picture,
 .indie__picture {
+}
+#observer__bg {
 }
 .background__div,
 .indie__div {
@@ -650,6 +651,10 @@ body {
   position: relative;
 }
 .background__a {
+}
+.background__picture {
+  max-height: 620px;
+  object-fit: cover;
 }
 
 .trends__section,
@@ -681,11 +686,23 @@ body {
 .categories__column,
 .weeklyoffers__column {
   width: 100%;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 3rem;
+}
+.trends__compensation,
+.reservations__compensation,
+.bestseller__compensation,
+.reviews__compensation,
+.news__compensation,
+.categories__flex,
+.catgrid,
+.weeklyoffers__h2 {
+  width: 100%;
+  max-width: 1200px;
 }
 .trends__link,
 .reservations__link,
@@ -693,6 +710,7 @@ body {
 .reviews__link,
 .indie__link,
 .news__link {
+  width: fit-content;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -727,25 +745,24 @@ body {
 .news__container {
 }
 .listing {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
 .listingindie {
-  width: 100%;
-
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 
-  padding: 40px 0;
+  padding: 40px 0 0 0;
 
   z-index: 1;
 }
 .listingnews {
   width: 100%;
+  max-width: 1200px;
 
   display: flex;
   flex-flow: column nowrap;
@@ -754,8 +771,6 @@ body {
   gap: 1.875rem;
 }
 .listingweek {
-  width: 100%;
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -794,7 +809,6 @@ body {
 .listing__article,
 .listingindie__article,
 .listingweek__article {
-  /* width: fit-content; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -927,7 +941,7 @@ body {
 }
 
 .cards {
-  width: 100%;
+  /* width: 100%; */
   padding: 40px 30px 0;
   display: flex;
   flex-flow: row nowrap;
@@ -946,7 +960,6 @@ body {
   }
 }
 .cards__article {
-  width: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -956,6 +969,7 @@ body {
   background-color: var(--color-medium-dark);
 }
 .cards__link {
+  width: 100%;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -1014,11 +1028,11 @@ body {
 
 .trust__div {
   width: 100%;
-  min-height: 10svh;
 
   background-color: var(--color-ultra-dark);
 }
 .trust__wrapper {
+  max-width: 1200px;
 }
 .trust__contain {
   display: flex;
@@ -1097,10 +1111,13 @@ body {
   background-color: var(--color-medium-dark);
 }
 .partner__wrapper {
+  max-width: 1200px;
 }
+
 .partner__container {
   width: 100%;
-  height: 30svh;
+
+  /* height: 30svh; */
   min-height: 20rem;
   position: relative;
 
@@ -1149,24 +1166,21 @@ body {
 
 .comments__container {
   width: 100%;
-  min-height: 20svh;
   background-color: var(--color-dark);
   overflow: hidden;
 }
 .comments__wrapper {
 }
 .comments__ul {
-  width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   gap: 2rem;
 }
 .comments__li {
-  width: 25rem;
-  height: fit-content;
+  width: min-content;
   background-color: var(--color-medium-dark);
   padding: 1rem;
 
@@ -1257,42 +1271,35 @@ body {
 }
 
 .indie__background {
-  width: 100%;
-  /* min-height: 46.875rem; */
-  min-height: auto;
-  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
 
   background-image: linear-gradient(80deg, rgba(50, 50, 50, 0.4), #323232 35%), url(/assets/img/deadcells.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
 
-  position: relative;
-
   overflow: hidden;
 }
 .indie__column {
-  width: 45%;
-
-  margin-left: auto;
-  margin-right: 15%;
-
+  max-width: 800px;
+  margin-right: 5%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
 }
 .indie__character {
-  width: 100%;
-  min-height: 600px;
+  flex: 0 0 360px;
+  height: 600px;
+  margin-right: 50px;
+  margin-left: 5%;
   background-image: url(/assets/img/beheaded.png);
 
   background-repeat: no-repeat;
   background-size: contain;
-
-  position: absolute;
-  top: 10%;
-  left: 18%;
 
   pointer-events: none;
 }
@@ -1418,13 +1425,15 @@ body {
 }
 
 .background__extension {
-  min-height: 50vh;
+  max-height: 620px;
+  object-fit: cover;
   background-color: #489bca;
   background-image: radial-gradient(circle at center bottom, #489bca 0, #154483 29%, #0f0f1b 73%);
 
   clip-path: polygon(0% 90%, 0% 0%, 100% 0%, 100% 100%);
 }
 .background__wrapper {
+  max-width: 1200px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -1499,7 +1508,6 @@ body {
 
 .actions__section {
   width: 100%;
-  min-height: 25vh;
   padding: 2rem 0;
   background-color: var(--color-medium-dark);
 }
@@ -1547,6 +1555,7 @@ body {
   gap: 30px;
 }
 .footer__wrapper {
+  max-width: 1200px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -1657,26 +1666,20 @@ body {
 }
 
 /* media queries */
-
+@media screen and (max-width: 1600px) {
+  .comments__ul {
+    justify-content: flex-start;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+}
 @media screen and (max-width: 1440px) {
   .narrow__wrapper {
     width: 85%;
   }
-  .comments__ul {
-    overflow: scroll;
-    scrollbar-width: none;
-  }
+
   .listing {
     gap: 2rem;
-  }
-  .indie__character {
-    min-height: 500px;
-    top: 20%;
-    left: 5%;
-  }
-  .indie__column {
-    width: 60%;
-    margin-right: 5%;
   }
 }
 
@@ -1745,18 +1748,10 @@ body {
   .cards__li {
     width: fit-content;
   }
-  .listingindie {
-    gap: 2rem;
-  }
   .indie__character {
-    top: 15%;
-    left: 5%;
-    width: 75%;
-    min-height: 450px;
-  }
-  .indie__column {
-    width: 60%;
-    margin-right: 5%;
+    flex: 0 0 300px;
+    height: 400px;
+    margin-right: -5%;
   }
   .catgrid {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -1782,6 +1777,7 @@ body {
   }
   .listing {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
   }
   .background__extension {
     display: none;
@@ -1794,6 +1790,19 @@ body {
   .cards__article {
     width: 20rem;
   }
+  .indie__background {
+    padding: 1rem 0;
+  }
+  .indie__character {
+    flex: 0 0 250px;
+    height: 300px;
+  }
+  .listingindie__name {
+    font-size: 13px;
+  }
+  .listingindie__price {
+    font-size: 15px;
+  }
   .partner__img {
     width: 40%;
     height: auto;
@@ -1804,11 +1813,6 @@ body {
   }
   .partner__p {
     font-size: 15px;
-  }
-  .indie__character {
-    width: 25%;
-    min-height: 350px;
-    top: 30%;
   }
   .catgrid {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
@@ -1873,6 +1877,13 @@ body {
   }
   .listingweek__li {
     width: 100%;
+  }
+}
+@media screen and (max-width: 625px) {
+  .indie__character {
+    flex: 0 0 225px;
+    height: 250px;
+    margin-right: -10%;
   }
 }
 @media screen and (max-width: 500px) {
