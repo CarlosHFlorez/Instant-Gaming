@@ -1248,7 +1248,7 @@ body {
 .offer {
   position: absolute;
   bottom: 40%;
-  left: calc(50% - (1200px / 2));
+  left: 18%;
 }
 .offer__title {
   font-size: 2.5rem;
@@ -1681,6 +1681,9 @@ body {
   .listingweek__li {
     width: calc(33.33333% - 30px);
   }
+  .offer {
+    left: 8%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1766,6 +1769,9 @@ body {
     overflow: scroll;
     scrollbar-width: none;
   }
+  .offer {
+    left: 3%;
+  }
 }
 @media screen and (max-width: 768px) {
   .header__a {
@@ -1822,7 +1828,13 @@ body {
     font-size: 13px;
     line-height: 18px;
   }
+  .offer__title {
+    font-size: 23px;
+  }
 
+  .offer__price {
+    font-size: 2rem;
+  }
   .news__div {
     gap: 0.25rem;
   }
