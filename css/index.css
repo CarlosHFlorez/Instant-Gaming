@@ -1675,9 +1675,11 @@ body {
   .narrow__wrapper {
     width: 85%;
   }
-
   .listing {
     gap: 2rem;
+  }
+  .listingweek__li {
+    width: calc(33.33333% - 30px);
   }
 }
 
@@ -1874,6 +1876,9 @@ body {
     justify-content: flex-start;
     overflow: scroll;
     scrollbar-width: none;
+  }
+  .listingweek__li {
+    width: 100%;
   }
 }
 @media screen and (max-width: 625px) {
