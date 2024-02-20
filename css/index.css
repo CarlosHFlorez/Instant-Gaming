@@ -1306,6 +1306,9 @@ body {
   align-items: flex-start;
   gap: 1rem;
 }
+.news__a:hover .news__h4 {
+  text-decoration: underline;
+}
 .news__img {
   width: 25%;
   object-fit: cover;
