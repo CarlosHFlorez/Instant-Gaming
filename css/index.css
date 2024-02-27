@@ -436,6 +436,9 @@ body {
   font-size: 1.125rem;
   color: var(--color-white);
 }
+.form__recovering:hover {
+  color: var(--main-color);
+}
 
 .menu__ul {
   display: flex;
