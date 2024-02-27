@@ -340,13 +340,13 @@ body {
 .login__close {
   position: absolute;
   top: 2%;
-  right: 2%;
+  right: 1%;
 
   cursor: pointer;
 }
 .login__svg {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   fill: var(--color-white);
 
   transition: all 0.3s ease;
@@ -408,7 +408,7 @@ body {
 
   transition: all 0.3s ease;
 }
-#form__email,
+#form__email:hover,
 #form__password:hover {
   outline: 2px solid var(--main-color);
 }

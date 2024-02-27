@@ -30,6 +30,9 @@ const menu = document.querySelector(`.menu`);
 const observerBg = document.querySelector(`#observer__bg`);
 const categoriesBtn = document.querySelector(`.categories__btn`);
 const catGridCat = document.querySelectorAll(`.catgrid__cat`);
+const loginScreen = document.querySelector(`.login__screen`);
+const loginUser = document.querySelector(`#login__user`);
+const loginClose = document.querySelector(`.login__close`);
 
 //Search menu
 navMenuSearch.addEventListener(`click`, () => {
@@ -183,4 +186,14 @@ categoriesBtn.addEventListener(`click`, () => {
   arrayHidden.forEach((eachCat, i) => {
     eachCat.classList.toggle(`is--hidden`);
   });
+});
+
+//Login screen
+loginUser.addEventListener(`click`, () => {
+  loginScreen.classList.toggle(`is--active`);
+  document.body.style.overflow = `hidden`;
+});
+loginClose.addEventListener(`click`, () => {
+  loginScreen.classList.remove(`is--active`);
+  document.body.style.overflow = `visible`;
 });
