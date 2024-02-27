@@ -283,6 +283,160 @@ body {
   padding: 0.5rem;
   z-index: 1;
 }
+.login__screen {
+  width: 100%;
+  height: 100svh;
+  background-color: var(--color-medium-dark);
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
+.login__a.facebook,
+.login__a.google,
+.login__a.apple,
+.login__a.discord {
+  padding: 0;
+  border-radius: 0.5rem;
+}
+.login__panel {
+  width: 50%;
+}
+.login__signup {
+  width: fit-content;
+  margin: auto;
+
+  padding: 3rem;
+
+  display: flex;
+
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 3rem;
+}
+.login__bg {
+  width: 50%;
+  height: 100%;
+}
+.login__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.login__close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+
+  cursor: pointer;
+}
+.login__svg {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--color-white);
+
+  transition: all 0.3s ease;
+}
+.login__svg:hover {
+  fill: var(--main-color-hover);
+}
+.login__h2 {
+  font-size: 2rem;
+}
+.login__connections {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+.login__icon {
+  border-radius: 0.5rem;
+}
+.login__separator {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+.login__bar {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-medium-light);
+}
+.login__span {
+  font-size: 1.5rem;
+}
+.login__form {
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+#form__email,
+#form__password {
+  width: 100%;
+  background-color: var(--color-dark);
+  outline: 2px solid var(--color-medium);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+
+  font-size: 1.125rem;
+
+  transition: all 0.3s ease;
+}
+#form__email,
+#form__password:hover {
+  outline: 2px solid var(--main-color);
+}
+
+#form__submit {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  background: var(--fire-gradient);
+
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+}
+#form__submit:hover {
+  background: var(--fire-gradient-hover);
+}
+.form__forgot {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__recovering {
+  font-size: 1.125rem;
+  color: var(--color-white);
+}
+
 .menu__ul {
   display: flex;
   flex-flow: row nowrap;
