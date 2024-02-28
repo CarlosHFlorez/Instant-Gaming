@@ -1399,7 +1399,7 @@ body {
   align-items: center;
   padding: 3.75rem 0;
 
-  background-image: linear-gradient(80deg, rgba(50, 50, 50, 0.4), #323232 35%), url(assets/img/deadcells.png);
+  background-image: linear-gradient(80deg, rgba(50, 50, 50, 0.4), #323232 35%), url(../assets/img/deadcells.png);
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1419,7 +1419,7 @@ body {
   height: 37.5rem;
   margin-right: 3.125rem;
   margin-left: 5%;
-  background-image: url(assets/img/beheaded.png);
+  background-image: url(../assets/img/beheaded.png);
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -1562,7 +1562,7 @@ body {
 .background__img {
   width: 100%;
   height: 35rem;
-  background-image: url(assets/img/extension3.png);
+  background-image: url(../assets/img/extension3.png);
   background-position: right 3.125rem;
   background-repeat: no-repeat;
 }
