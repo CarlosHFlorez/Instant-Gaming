@@ -310,6 +310,15 @@ body {
 .login__a.discord {
   padding: 0;
   border-radius: 0.5rem;
+  outline: 0.125rem solid var(--color-medium-dark);
+
+  transition: all 0.2s ease;
+}
+.login__a.facebook:hover,
+.login__a.google:hover,
+.login__a.apple:hover,
+.login__a.discord:hover {
+  outline: 0.125rem solid var(--main-color);
 }
 .login__panel {
   width: 50%;
@@ -380,7 +389,7 @@ body {
 }
 .login__bar {
   width: 100%;
-  height: 1px;
+  height: 0.0625rem;
   background-color: var(--color-medium-light);
 }
 .login__span {
@@ -400,8 +409,8 @@ body {
 #form__password {
   width: 100%;
   background-color: var(--color-dark);
-  outline: 2px solid var(--color-medium);
-  border-radius: 8px;
+  outline: 0.125rem solid var(--color-medium);
+  border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
 
   font-size: 1.125rem;
@@ -410,7 +419,7 @@ body {
 }
 #form__email:hover,
 #form__password:hover {
-  outline: 2px solid var(--main-color);
+  outline: 0.125rem solid var(--main-color);
 }
 
 #form__submit {
@@ -433,12 +442,14 @@ body {
   width: 100%;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+
+  gap: 1rem;
 }
 .form__recovering {
-  font-size: 14px;
+  font-size: 0.875rem;
   white-space: nowrap;
   color: var(--color-white);
 }
@@ -1878,6 +1889,17 @@ body {
   .offer {
     left: 3%;
   }
+  .login__close {
+    top: 0.25%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .login__bg {
+    display: none;
+  }
+  .login__panel {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 48rem) {
   .header__a {
@@ -1998,6 +2020,9 @@ body {
   }
   .listingweek__li {
     width: 100%;
+  }
+  .login__close {
+    top: 0.5%;
   }
 }
 @media screen and (max-width: 39.0625rem) {
